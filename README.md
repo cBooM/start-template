@@ -1,9 +1,3 @@
-
-# start-template
-HTML5 starting template
-
-
-
 # HTML5 starting template
 
 git clone https://cboom@bitbucket.org/cboom/start.git
