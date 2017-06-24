@@ -1,6 +1,6 @@
 # HTML5 starting template
 
-git clone https://cboom@bitbucket.org/cboom/start.git
+git clone https://github.com/cBooM/start-template.git
 
 ## Includes CDN for:
 
