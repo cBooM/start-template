@@ -26,12 +26,13 @@ module.exports = function(grunt) {
 					src: [
 						"css/*.css",
 						"js/scripts.js",
+						"*.html",
 						"*.php"
 					]
 				},
 				options: {
 					watchTask: true,
-					proxy: "localhost:8888/phptest"
+					proxy: "localhost/start-template"
 				}
 			}
 		}

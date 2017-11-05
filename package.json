@@ -13,5 +13,8 @@
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.4.4-rc1"
   }
 }
