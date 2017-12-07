@@ -1,49 +1,41 @@
-// Gruntfile.js
 module.exports = function(grunt) {
-	// Task configuration will go here
+
+	const FRONTEND = 'dev';
+
+	require('load-grunt-tasks')(grunt);
 
 	grunt.initConfig({
-		// Watch task config
 		watch: {
-			sass: {
-				files: "css/*.scss",
-				tasks: ['sass']
-			}
+			files: [FRONTEND + '/assets/scss/*.scss'],
+			tasks: ['sass']
 		},
-		// SASS task config
 		sass: {
-			dev: {
+			all: {
+				options: {
+					loadPath: ['node_modules/foundation-sites/scss/']
+				},
 				files: {
-					// destination         // source file
-					"css/custom.css": "css/custom.scss"
+					'dev/assets/css/compiled.css': 'dev/assets/scss/main.scss'
 				}
 			}
 		},
-		// browserSync task config
 		browserSync: {
-			default_options: {
+			all: {
 				bsFiles: {
-					src: [
-						"css/*.css",
-						"js/scripts.js",
-						"*.html",
-						"*.php"
-					]
+					src: ['dev/assets/css/*.css', 'dev/**/*.html']
 				},
 				options: {
+					port: 3020,
 					watchTask: true,
-					proxy: "localhost/start-template"
+					startPath: '.',
+					server: {
+						baseDir: FRONTEND
+					}
 				}
 			}
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-browser-sync');
-	grunt.registerTask('dev', ['sass', 'browserSync', 'watch']);
-
-
-
+	grunt.registerTask('dev',['sass', 'browserSync', 'watch']);
 
 };

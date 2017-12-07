@@ -1,0 +1,9 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": ["dev/assets/css", ".sass-cache", "build", "browserify", "node_modules"]
+		}
+	]
+}
