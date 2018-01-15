@@ -1,5 +1,9 @@
 node_modules
-f
+assets/css/*.css
+assets/css/*.css.map
+.sass-cache
+.DS_Store
+*.sublime-workspace
 
 # Compiled source #
 ###################

@@ -1,49 +1,36 @@
-// Gruntfile.js
 module.exports = function(grunt) {
-	// Task configuration will go here
+ 
+
+	require('load-grunt-tasks')(grunt);
 
 	grunt.initConfig({
-		// Watch task config
 		watch: {
-			sass: {
-				files: "css/*.scss",
-				tasks: ['sass']
-			}
+			files: ['assets/scss/*.scss'],
+			tasks: ['sass']
 		},
-		// SASS task config
 		sass: {
-			dev: {
+			all: {
+				options: {
+					loadPath: ['node_modules/foundation-sites/scss/']
+				},
 				files: {
-					// destination         // source file
-					"css/custom.css": "css/custom.scss"
+					'assets/css/compiled.css': 'assets/scss/main.scss'
 				}
 			}
 		},
-		// browserSync task config
 		browserSync: {
-			default_options: {
+			all: {
 				bsFiles: {
-					src: [
-						"css/*.css",
-						"js/scripts.js",
-						"*.html",
-						"*.php"
-					]
+					src: ['assets/css/*.css', "**/*.php"]
 				},
 				options: {
 					watchTask: true,
-					proxy: "localhost/start-template"
+					proxy: "localhost/sofi"
 				}
 			}
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-browser-sync');
-	grunt.registerTask('dev', ['sass', 'browserSync', 'watch']);
-
-
-
+	grunt.registerTask('dev',['sass', 'browserSync', 'watch']);
 
 };

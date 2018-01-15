@@ -1,0 +1,23 @@
+footer {
+	margin-top: 4rem;
+	width: 1440px;
+	height: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $black;
+	padding: 2rem 9rem 1.3rem 9rem;
+	color: white;
+
+	.menu {
+		font-size: 0.8rem;
+		// width: 20rem;
+		// white-space: nowrap;
+		// display: inline;
+
+		li {
+			// white-space: nowrap;
+			display: inline-block;
+			margin-left: 1rem;
+		}
+	}
+}
