@@ -1,3 +1,5 @@
 $(function() {
-	$(document).foundation();
+  $(document).foundation();
+
+  // let the magic begin ..
 });

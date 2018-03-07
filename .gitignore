@@ -1,11 +1,5 @@
 node_modules
-<<<<<<< HEAD
-assets/css/*.css
 assets/css/*.css.map
-=======
-dev/assets/css/*.css
-dev/assets/css/*.css.map
->>>>>>> 571c9c72a0a9e0c34667dc00b5b8e060400247d0
 .sass-cache
 .DS_Store
 *.sublime-workspace
